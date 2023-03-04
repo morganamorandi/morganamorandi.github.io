@@ -652,8 +652,85 @@ body {
 .cursor { display: none; }
 
 
+/*-----------------------------------*\
+  #PROJECTS PAGE
+\*-----------------------------------*/
 
+.project-slideshow { margin-bottom: 30px; }
 
+.project-slides {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 0 -15px;
+  padding: 25px 15px;
+  padding-bottom: 35px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+}
+
+.slideshow-item {
+  scroll-snap-align: center;
+}
+
+.project-img img {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100px;
+  height: auto;
+}
+
+.has-scrollbar::-webkit-scrollbar {
+  height: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar-track {
+  background: var(--bg-dark-teal);
+  border-radius: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--bg-teal);
+  border-radius: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar-button { width: 20px; }
+
+.project-grid-elements {
+  display: grid
+  gap: 20px;
+}
+
+.project-title
+.project-subtitle,
+.project-text { text-align: left; }
+
+.project-subtitle {
+  color: var(--text-white);
+  font-weight: var(--weight-semiBold);
+  font-size: var(--fontSize-5);
+  text-transform: uppercase;
+}
+
+.project-title {
+  margin-block: 10px;
+  text-transform: uppercase;
+}
+
+.project-title .span {
+  display: inline;
+  color: var(--text-teal);
+}
+
+.project-text {
+  margin-block-end: 40px;
+  max-width: 480px;
+  margin-inline: auto;
+}
 
 /*-----------------------------------*\
   #MEDIA QUERIES
